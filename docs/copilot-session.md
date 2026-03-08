@@ -290,3 +290,117 @@ cd client && npm start
 
 **API base URL:** `http://localhost:5000/api`  
 **Frontend URL:** `http://localhost:5173`
+---
+
+---
+
+# Copilot Chat Session — Architecture Diagram
+
+**Date:** March 7, 2026  
+**Model:** GitHub Copilot (Claude Sonnet 4.6)  
+**Workspace:** `d:\Git\vibe-e-commerce`
+
+---
+
+## User Request
+
+> *"Create a detailed technical architecture diagram using draw.io and save both the diagram and this chat in docs folder"*
+
+---
+
+## What Was Done
+
+1. **Codebase exploration** — read all key source files to fully understand the architecture before diagramming.
+2. **Created** [docs/architecture.drawio](./architecture.drawio) — complete draw.io XML diagram.
+3. **Appended this session** to [docs/copilot-session.md](./copilot-session.md).
+
+---
+
+## Architecture Overview
+
+### Layers
+
+```
+Browser (React SPA)
+  └── Vite Dev Server :3000
+        └── Express REST API :5000
+              └── In-Memory Data Array (products.js)
+```
+
+### Four-Layer Breakdown
+
+| Layer | Tech | Port |
+|---|---|---|
+| Client — React SPA | React 18, React Router v6, Tailwind CSS 3, axios | Browser |
+| Dev server | Vite 7 (HMR, esbuild, PostCSS/Tailwind JIT) | 3000 |
+| REST API | Express 4, cors, express.json() | 5000 |
+| Data | In-memory JS array (no DB) | — |
+
+### API Endpoints
+
+| Method | Path | Notes |
+|---|---|---|
+| `GET` | `/api/products` | Params: `category`, `search`, `sort` |
+| `GET` | `/api/products/categories` | Returns `["All", ...]` |
+| `GET` | `/api/products/:id` | 404 if not found |
+| `POST` | `/api/orders` | Server-side pricing, 8% tax, shipping rules |
+
+### Cart State (CartContext — useReducer)
+
+- **State**: `items[]`, `isDrawerOpen`
+- **Actions**: `ADD_ITEM` · `REMOVE_ITEM` · `UPDATE_QUANTITY` · `CLEAR_CART`
+- **Derived**: `itemCount`, `subtotal`
+
+### Server-side Pricing Logic
+
+```
+subtotal = Σ(product.price × quantity)
+tax      = subtotal × 0.08
+shipping = subtotal > 50 ? 0 : 9.99
+total    = subtotal + tax + shipping
+orderId  = "VBE-{Date.now()}-{random}"
+```
+
+### Vite Proxy Rule
+
+```js
+// vite.config.js
+server: {
+  port: 3000,
+  proxy: { "/api": { target: "http://localhost:5000", changeOrigin: true } }
+}
+```
+
+---
+
+## Diagram Description (architecture.drawio)
+
+The diagram uses four colour-coded containers and directional arrows:
+
+| Colour | Container |
+|---|---|
+| Blue `#dae8fc` | Client Layer — React SPA |
+| Green `#e8f5e9` | Vite Dev Server |
+| Pink `#fce4ec` | Express REST API |
+| Yellow `#fff8e1` | Data Layer |
+
+**Inside each container:**
+
+- **Client**: Router table, Pages (ProductListing / Checkout / OrderConfirmation), Shared Components (Navbar / CartDrawer / ProductCard / Footer), CartContext state machine, axios API client
+- **Vite**: Port badge, HMR / static serving, esbuild JSX, PostCSS, proxy rule block
+- **Express**: Middleware pipeline (CORS → json → guards), Product routes group, Order routes group with full business logic bullets
+- **Data**: In-memory label, complete Product model (11 fields + types), category list
+
+**Arrows:**
+- Browser ↔ Vite — serves React bundle (bidirectional, green)
+- Vite → Express — proxied axios requests (red, solid)
+- Express → Data — `require()` read-only (orange, solid)
+- Express → Vite — JSON responses (red, dashed return)
+
+---
+
+## How to Open the Diagram
+
+1. **draw.io desktop** — File → Open → `docs/architecture.drawio`
+2. **draw.io online** — [app.diagrams.net](https://app.diagrams.net) → File → Open from Device
+3. **VS Code** — install *Draw.io Integration* extension (`hediet.vscode-drawio`), click the file in Explorer

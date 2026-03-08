@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="1800" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" math="0" shadow="1">
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- TITLE                                                       -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="title"
+      value="Vibe E-Commerce &#8212; Technical Architecture"
+      style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;
+             whiteSpace=wrap;rounded=0;fontSize=28;fontStyle=1;fontColor=#1a1a1a;"
+      vertex="1" parent="1">
+      <mxGeometry x="40" y="16" width="1740" height="50" as="geometry" />
+    </mxCell>
+
+    <mxCell id="subtitle"
+      value="React 18 SPA  &#183;  Vite 7 Dev Server  &#183;  Express 4 REST API  &#183;  In-Memory Data Store"
+      style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;
+             whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2;fontColor=#555555;"
+      vertex="1" parent="1">
+      <mxGeometry x="40" y="64" width="1740" height="26" as="geometry" />
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- CONTAINER A - CLIENT / BROWSER LAYER  (x=40, w=520)       -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="client-bg"
+      value=""
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;
+             strokeWidth=2.5;verticalAlign=top;"
+      vertex="1" parent="1">
+      <mxGeometry x="40" y="100" width="520" height="900" as="geometry" />
+    </mxCell>
+
+    <!-- Layer header band -->
+    <mxCell id="client-header"
+      value="CLIENT LAYER &#8212; Browser (React SPA)"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6c8ebf;strokeColor=none;
+             align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#ffffff;"
+      vertex="1" parent="1">
+      <mxGeometry x="40" y="100" width="520" height="36" as="geometry" />
+    </mxCell>
+
+    <!-- Stack badge -->
+    <mxCell id="client-stack"
+      value="React 18  &#183;  React Router v6  &#183;  Tailwind CSS 3  &#183;  axios 1.x"
+      style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bdd7f5;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=12;fontStyle=1;fontColor=#023d8a;align=center;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="146" width="488" height="30" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ React Router section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="router-bg"
+      value=""
+      style="rounded=1;fillColor=#eaf3fc;strokeColor=#6c8ebf;strokeWidth=1.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="186" width="488" height="96" as="geometry" />
+    </mxCell>
+    <mxCell id="router-label"
+      value="React Router v6 &#8212; Route Definitions"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c5dcf5;strokeColor=#6c8ebf;
+             align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#023d8a;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="186" width="488" height="28" as="geometry" />
+    </mxCell>
+
+    <mxCell id="route-home"
+      value="&lt;b&gt;/&lt;/b&gt; &#8594; ProductListing"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=12;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="66" y="222" width="148" height="48" as="geometry" />
+    </mxCell>
+    <mxCell id="route-checkout"
+      value="&lt;b&gt;/checkout&lt;/b&gt; &#8594; Checkout"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=12;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="228" y="222" width="158" height="48" as="geometry" />
+    </mxCell>
+    <mxCell id="route-confirm"
+      value="&lt;b&gt;/order-confirmation&lt;/b&gt;"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=12;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="400" y="222" width="134" height="48" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ Pages section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="pages-bg"
+      value=""
+      style="rounded=1;fillColor=#eaf3fc;strokeColor=#6c8ebf;strokeWidth=1.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="292" width="488" height="188" as="geometry" />
+    </mxCell>
+    <mxCell id="pages-label"
+      value="Pages"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c5dcf5;strokeColor=#6c8ebf;
+             align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#023d8a;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="292" width="488" height="28" as="geometry" />
+    </mxCell>
+
+    <mxCell id="page-listing"
+      value="&lt;b&gt;ProductListing.js&lt;/b&gt;&lt;hr/&gt;
+&#183; Category filter tabs (incl. All)&lt;br&gt;
+&#183; URL search param (?search=)&lt;br&gt;
+&#183; Sort: price&#8593;&#8595; / rating / reviews&lt;br&gt;
+&#183; ProductCard grid layout"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;spacingRight=6;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="66" y="328" width="150" height="138" as="geometry" />
+    </mxCell>
+
+    <mxCell id="page-checkout-box"
+      value="&lt;b&gt;Checkout.js&lt;/b&gt;&lt;hr/&gt;
+&#183; 3-step wizard&lt;br&gt;
+&#183; Shipping info form&lt;br&gt;
+&#183; Payment form (card)&lt;br&gt;
+&#183; Review &amp; submit order&lt;br&gt;
+&#183; Client-side validation&lt;br&gt;
+&#183; POST /api/orders"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;spacingRight=6;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="228" y="328" width="150" height="138" as="geometry" />
+    </mxCell>
+
+    <mxCell id="page-confirmation"
+      value="&lt;b&gt;OrderConfirmation.js&lt;/b&gt;&lt;hr/&gt;
+&#183; Order ID display&lt;br&gt;
+&#183; Item summary table&lt;br&gt;
+&#183; Estimated delivery&lt;br&gt;
+&#183; Clears cart on load&lt;br&gt;
+&#183; Link back to home"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;spacingRight=6;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="390" y="328" width="144" height="138" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ Shared Components section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="components-bg"
+      value=""
+      style="rounded=1;fillColor=#eaf3fc;strokeColor=#6c8ebf;strokeWidth=1.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="490" width="488" height="182" as="geometry" />
+    </mxCell>
+    <mxCell id="components-label"
+      value="Shared Components"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c5dcf5;strokeColor=#6c8ebf;
+             align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#023d8a;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="490" width="488" height="28" as="geometry" />
+    </mxCell>
+
+    <mxCell id="comp-navbar"
+      value="&lt;b&gt;Navbar.js&lt;/b&gt;&lt;hr/&gt;
+&#183; Sticky top header&lt;br&gt;
+&#183; Logo &#8594; home link&lt;br&gt;
+&#183; Search bar (&#8594; URL)&lt;br&gt;
+&#183; Cart icon + badge"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;spacingRight=6;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="66" y="526" width="146" height="130" as="geometry" />
+    </mxCell>
+
+    <mxCell id="comp-drawer"
+      value="&lt;b&gt;CartDrawer.js&lt;/b&gt;&lt;hr/&gt;
+&#183; Slide-in overlay&lt;br&gt;
+&#183; Item list + qty ctrl&lt;br&gt;
+&#183; Subtotal display&lt;br&gt;
+&#183; Remove item&lt;br&gt;
+&#183; &#8594; Checkout CTA"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;spacingRight=6;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="224" y="526" width="146" height="130" as="geometry" />
+    </mxCell>
+
+    <mxCell id="comp-card"
+      value="&lt;b&gt;ProductCard.js&lt;/b&gt;&lt;hr/&gt;
+&#183; Unsplash image&lt;br&gt;
+&#183; Badge (Best Seller&#8230;)&lt;br&gt;
+&#183; Name, price, rating&lt;br&gt;
+&#183; Review count&lt;br&gt;
+&#183; Add to Cart btn"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;spacingRight=6;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="382" y="526" width="152" height="130" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ CartContext section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="context-bg"
+      value=""
+      style="rounded=1;fillColor=#d6eaf8;strokeColor=#2980b9;strokeWidth=2;dashed=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="682" width="488" height="146" as="geometry" />
+    </mxCell>
+    <mxCell id="context-label"
+      value="CartContext  (React Context API + useReducer)"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#7fb3d3;strokeColor=#2980b9;
+             align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#ffffff;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="682" width="488" height="30" as="geometry" />
+    </mxCell>
+
+    <mxCell id="ctx-state"
+      value="&lt;b&gt;State&lt;/b&gt;&lt;br&gt;items[ ]&lt;br&gt;isDrawerOpen"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#2980b9;strokeWidth=1.5;
+             fontSize=11;align=center;verticalAlign=middle;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="66" y="720" width="146" height="94" as="geometry" />
+    </mxCell>
+    <mxCell id="ctx-derived"
+      value="&lt;b&gt;Derived&lt;/b&gt;&lt;br&gt;itemCount&lt;br&gt;subtotal"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#2980b9;strokeWidth=1.5;
+             fontSize=11;align=center;verticalAlign=middle;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="224" y="720" width="146" height="94" as="geometry" />
+    </mxCell>
+    <mxCell id="ctx-actions"
+      value="&lt;b&gt;Actions&lt;/b&gt;&lt;br&gt;ADD_ITEM&lt;br&gt;REMOVE_ITEM&lt;br&gt;UPDATE_QUANTITY&lt;br&gt;CLEAR_CART"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#2980b9;strokeWidth=1.5;
+             fontSize=11;align=center;verticalAlign=middle;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="382" y="720" width="152" height="94" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ API Client â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="apiclient-bg"
+      value="&lt;b&gt;API Client &#8212; src/api/index.js  (axios)&lt;/b&gt;&lt;br&gt;
+getProducts(params) &amp;nbsp;&#183;&amp;nbsp; getCategories() &amp;nbsp;&#183;&amp;nbsp; getProduct(id) &amp;nbsp;&#183;&amp;nbsp; placeOrder(payload)"
+      style="rounded=1;fillColor=#fff3cd;strokeColor=#e6a817;strokeWidth=2;
+             fontSize=12;fontColor=#5a3e00;align=center;verticalAlign=middle;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="838" width="488" height="62" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ Footer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="comp-footer"
+      value="&lt;b&gt;Footer.js&lt;/b&gt; &#8212; copyright bar"
+      style="rounded=1;fillColor=#eaf3fc;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=12;align=center;verticalAlign=middle;html=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="56" y="912" width="488" height="34" as="geometry" />
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- CONTAINER B â€” VITE DEV SERVER  (x=600, w=270)             -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="vite-bg"
+      value=""
+      style="rounded=1;fillColor=#e8f5e9;strokeColor=#388e3c;strokeWidth=2.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="600" y="100" width="270" height="380" as="geometry" />
+    </mxCell>
+
+    <mxCell id="vite-header"
+      value="VITE DEV SERVER"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#388e3c;strokeColor=none;
+             align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#ffffff;"
+      vertex="1" parent="1">
+      <mxGeometry x="600" y="100" width="270" height="36" as="geometry" />
+    </mxCell>
+
+    <mxCell id="vite-port"
+      value="localhost : 3000"
+      style="rounded=1;fillColor=#c8e6c9;strokeColor=#388e3c;strokeWidth=2;
+             fontSize=15;fontStyle=1;align=center;fontColor=#1b5e20;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="618" y="148" width="234" height="40" as="geometry" />
+    </mxCell>
+
+    <mxCell id="vite-features"
+      value="&lt;b&gt;Dev Features&lt;/b&gt;&lt;hr/&gt;
+&#183; Hot Module Replacement (HMR)&lt;br&gt;
+&#183; Static asset serving&lt;br&gt;
+&#183; esbuild &#8212; JSX transform (.js&#8594;jsx)&lt;br&gt;
+&#183; PostCSS / Tailwind JIT compilation"
+      style="rounded=1;fillColor=#f1f8e9;strokeColor=#81c784;strokeWidth=1.5;
+             fontSize=12;fontColor=#2e7d32;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="618" y="200" width="234" height="116" as="geometry" />
+    </mxCell>
+
+    <mxCell id="vite-proxy"
+      value="&lt;b&gt;Proxy Rule&lt;/b&gt;&lt;br&gt;
+/api/*&lt;br&gt;&#8594; http://localhost:5000&lt;br&gt;
+changeOrigin: true"
+      style="rounded=1;fillColor=#a5d6a7;strokeColor=#388e3c;strokeWidth=2;
+             fontSize=12;fontStyle=0;align=center;fontColor=#1b5e20;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="618" y="328" width="234" height="82" as="geometry" />
+    </mxCell>
+
+    <mxCell id="vite-start"
+      value="npm start  &#8594;  vite  (port 3000)"
+      style="text;html=1;strokeColor=none;fillColor=none;align=center;
+             fontSize=11;fontStyle=2;fontColor=#2e7d32;"
+      vertex="1" parent="1">
+      <mxGeometry x="600" y="418" width="270" height="24" as="geometry" />
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- CONTAINER C â€” EXPRESS API SERVER  (x=920, w=520)          -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="express-bg"
+      value=""
+      style="rounded=1;fillColor=#fce4ec;strokeColor=#c62828;strokeWidth=2.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="920" y="100" width="520" height="900" as="geometry" />
+    </mxCell>
+
+    <mxCell id="express-header"
+      value="API LAYER &#8212; Express.js Server"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c62828;strokeColor=none;
+             align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#ffffff;"
+      vertex="1" parent="1">
+      <mxGeometry x="920" y="100" width="520" height="36" as="geometry" />
+    </mxCell>
+
+    <mxCell id="express-port"
+      value="localhost : 5000  (Node.js)   |   PORT env var"
+      style="rounded=1;fillColor=#ef9a9a;strokeColor=#c62828;strokeWidth=2;
+             fontSize=14;fontStyle=1;align=center;fontColor=#6a0000;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="938" y="148" width="484" height="36" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ Middleware section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="mw-bg"
+      value=""
+      style="rounded=1;fillColor=#ffeef2;strokeColor=#c62828;strokeWidth=1.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="938" y="196" width="484" height="134" as="geometry" />
+    </mxCell>
+    <mxCell id="mw-label"
+      value="Middleware Pipeline"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f48fb1;strokeColor=#c62828;
+             align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#7b0000;"
+      vertex="1" parent="1">
+      <mxGeometry x="938" y="196" width="484" height="28" as="geometry" />
+    </mxCell>
+
+    <mxCell id="mw-cors"
+      value="&lt;b&gt;CORS&lt;/b&gt;&lt;hr/&gt;
+origin:&lt;br&gt;localhost:3000"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#c62828;strokeWidth=1.5;
+             fontSize=12;align=center;verticalAlign=middle;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="948" y="232" width="148" height="84" as="geometry" />
+    </mxCell>
+    <mxCell id="mw-body"
+      value="&lt;b&gt;express.json()&lt;/b&gt;&lt;hr/&gt;
+JSON body&lt;br&gt;parser"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#c62828;strokeWidth=1.5;
+             fontSize=12;align=center;verticalAlign=middle;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="1110" y="232" width="148" height="84" as="geometry" />
+    </mxCell>
+    <mxCell id="mw-valid"
+      value="&lt;b&gt;Input Guards&lt;/b&gt;&lt;hr/&gt;
+inline&lt;br&gt;validation"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#c62828;strokeWidth=1.5;
+             fontSize=12;align=center;verticalAlign=middle;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="1272" y="232" width="140" height="84" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ Product Routes section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="prod-routes-bg"
+      value=""
+      style="rounded=1;fillColor=#ffeef2;strokeColor=#c62828;strokeWidth=1.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="938" y="342" width="484" height="262" as="geometry" />
+    </mxCell>
+    <mxCell id="prod-routes-label"
+      value="Product Routes  (server/data/products.js &#8212; in-memory array)"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f48fb1;strokeColor=#c62828;
+             align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#7b0000;"
+      vertex="1" parent="1">
+      <mxGeometry x="938" y="342" width="484" height="28" as="geometry" />
+    </mxCell>
+
+    <mxCell id="r-get-products"
+      value="&lt;b&gt;GET /api/products&lt;/b&gt;&lt;hr/&gt;
+Query: &lt;i&gt;category, search, sort&lt;/i&gt;&lt;br&gt;
+&#183; Filter by category (case-insensitive)&lt;br&gt;
+&#183; Substring search on name / category / desc&lt;br&gt;
+&#183; Sort: price_asc | price_desc | rating | reviews&lt;br&gt;
+&lt;br&gt;
+Returns: &lt;b&gt;{ count, products[ ] }&lt;/b&gt;"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#c62828;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;spacingRight=8;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="948" y="378" width="228" height="210" as="geometry" />
+    </mxCell>
+
+    <mxCell id="r-get-cats-and-id"
+      value="&lt;b&gt;GET /api/products/categories&lt;/b&gt;&lt;hr/&gt;
+Returns unique category list&lt;br&gt;
+Prepends &quot;All&quot; to array&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;GET /api/products/:id&lt;/b&gt;&lt;hr/&gt;
+Finds product by numeric ID&lt;br&gt;
+Returns &lt;b&gt;404&lt;/b&gt; if not found&lt;br&gt;
+Returns single product object"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#c62828;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=10;spacingTop=6;spacingRight=8;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="1190" y="378" width="222" height="210" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ Order Routes section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="order-routes-bg"
+      value=""
+      style="rounded=1;fillColor=#ffeef2;strokeColor=#c62828;strokeWidth=1.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="938" y="616" width="484" height="288" as="geometry" />
+    </mxCell>
+    <mxCell id="order-routes-label"
+      value="Order Routes"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f48fb1;strokeColor=#c62828;
+             align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#7b0000;"
+      vertex="1" parent="1">
+      <mxGeometry x="938" y="616" width="484" height="28" as="geometry" />
+    </mxCell>
+
+    <mxCell id="r-post-order"
+      value="&lt;b&gt;POST /api/orders&lt;/b&gt;&lt;hr/&gt;
+&lt;i&gt;Body: { customer, items[ ], shippingAddress }&lt;/i&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Business Logic:&lt;/b&gt;&lt;br&gt;
+&#183; Validates payload (customer + items required)&lt;br&gt;
+&#183; Re-calculates prices server-side (security)&lt;br&gt;
+&#183; Tax: subtotal &#215; 8%&lt;br&gt;
+&#183; Shipping: FREE if subtotal &gt; $50, else $9.99&lt;br&gt;
+&#183; Generates orderId: &lt;tt&gt;VBE-{timestamp}-{rand}&lt;/tt&gt;&lt;br&gt;
+&#183; Estimated delivery: +7 business days&lt;br&gt;
+&lt;br&gt;
+Returns full order object + delivery date"
+      style="rounded=1;fillColor=#ffffff;strokeColor=#c62828;strokeWidth=1.5;
+             fontSize=11;align=left;verticalAlign=top;
+             spacingLeft=12;spacingTop=8;spacingRight=10;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="948" y="652" width="464" height="236" as="geometry" />
+    </mxCell>
+
+    <!-- â”€â”€ npm scripts note â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+    <mxCell id="npm-info"
+      value="dev: &lt;tt&gt;nodemon server.js&lt;/tt&gt;  &amp;nbsp;|&amp;nbsp;  prod: &lt;tt&gt;node server.js&lt;/tt&gt;  &amp;nbsp;|&amp;nbsp;  root: &lt;tt&gt;npm start&lt;/tt&gt; (concurrent)"
+      style="text;html=1;strokeColor=none;fillColor=none;align=center;
+             fontSize=11;fontStyle=2;fontColor=#7b0000;"
+      vertex="1" parent="1">
+      <mxGeometry x="920" y="916" width="520" height="26" as="geometry" />
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- CONTAINER D â€” DATA LAYER  (x=1490, w=290)                 -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="data-bg"
+      value=""
+      style="rounded=1;fillColor=#fff8e1;strokeColor=#f57f17;strokeWidth=2.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="1490" y="100" width="290" height="580" as="geometry" />
+    </mxCell>
+
+    <mxCell id="data-header"
+      value="DATA LAYER"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f57f17;strokeColor=none;
+             align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#ffffff;"
+      vertex="1" parent="1">
+      <mxGeometry x="1490" y="100" width="290" height="36" as="geometry" />
+    </mxCell>
+
+    <mxCell id="data-store-type"
+      value="In-Memory Array&lt;br&gt;&lt;tt&gt;server/data/products.js&lt;/tt&gt;"
+      style="rounded=1;fillColor=#ffecb3;strokeColor=#f57f17;strokeWidth=2;
+             fontSize=13;fontStyle=1;align=center;fontColor=#bf360c;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="1508" y="150" width="254" height="52" as="geometry" />
+    </mxCell>
+
+    <!-- Product Model box -->
+    <mxCell id="model-bg"
+      value=""
+      style="rounded=1;fillColor=#fffff0;strokeColor=#f57f17;strokeWidth=1.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="1508" y="214" width="254" height="358" as="geometry" />
+    </mxCell>
+    <mxCell id="model-label"
+      value="Product Model"
+      style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe082;strokeColor=#f57f17;
+             align=center;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#bf360c;"
+      vertex="1" parent="1">
+      <mxGeometry x="1508" y="214" width="254" height="28" as="geometry" />
+    </mxCell>
+
+    <mxCell id="model-fields"
+      value="&lt;table width='100%' cellpadding='4' cellspacing='0'&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;tt&gt;id&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;number&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor='#fffde7'&gt;&lt;td&gt;&lt;tt&gt;name&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;string&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;tt&gt;category&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;string&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor='#fffde7'&gt;&lt;td&gt;&lt;tt&gt;price&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;number&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;tt&gt;originalPrice&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;number&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor='#fffde7'&gt;&lt;td&gt;&lt;tt&gt;rating&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;number (0&#8211;5)&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;tt&gt;reviewCount&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;number&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor='#fffde7'&gt;&lt;td&gt;&lt;tt&gt;image&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;URL&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;tt&gt;description&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;string&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor='#fffde7'&gt;&lt;td&gt;&lt;tt&gt;inStock&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;boolean&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;tt&gt;badge&lt;/tt&gt;&lt;/td&gt;&lt;td&gt;&lt;i&gt;string?&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;"
+      style="text;html=1;strokeColor=none;fillColor=none;
+             fontSize=12;align=left;verticalAlign=top;spacingTop=4;"
+      vertex="1" parent="1">
+      <mxGeometry x="1508" y="244" width="254" height="320" as="geometry" />
+    </mxCell>
+
+    <!-- Categories -->
+    <mxCell id="data-categories"
+      value="&lt;b&gt;Categories&lt;/b&gt;&lt;hr/&gt;
+Electronics &#183; Books&lt;br&gt;
+Clothing &#183; Home &amp; Kitchen&lt;br&gt;
+Sports &amp; Outdoors &#183; Beauty"
+      style="rounded=1;fillColor=#fff3cd;strokeColor=#f57f17;strokeWidth=1.5;
+             fontSize=12;align=center;fontColor=#bf360c;html=1;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="1508" y="582" width="254" height="84" as="geometry" />
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- DATA FLOW ARROWS                                            -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+
+    <!-- Browser â†â†’ Vite Dev Server: serves React bundle -->
+    <mxCell id="arrow-serve"
+      value="Serves React bundle&lt;br&gt;(HTML / JS / CSS / HMR)"
+      style="edgeStyle=orthogonalEdgeStyle;rounded=1;
+             exitX=1;exitY=0.25;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.25;entryDx=0;entryDy=0;
+             strokeColor=#388e3c;strokeWidth=3;fontColor=#1b5e20;
+             fontSize=11;fontStyle=1;endArrow=open;endFill=0;
+             startArrow=open;startFill=0;html=1;"
+      edge="1" source="client-bg" target="vite-bg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Vite â†’ Express: proxied axios requests -->
+    <mxCell id="arrow-api-req"
+      value="axios HTTP requests&lt;br&gt;/api/* (proxied)"
+      style="edgeStyle=orthogonalEdgeStyle;rounded=1;
+             exitX=1;exitY=0.5;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.3;entryDx=0;entryDy=0;
+             strokeColor=#c62828;strokeWidth=3;fontColor=#7b0000;
+             fontSize=11;fontStyle=1;endArrow=block;endFill=1;html=1;"
+      edge="1" source="vite-bg" target="express-bg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- Express â†’ Data store -->
+    <mxCell id="arrow-data"
+      value="require( ) read-only&lt;br&gt;array operations"
+      style="edgeStyle=orthogonalEdgeStyle;rounded=1;
+             exitX=1;exitY=0.4;exitDx=0;exitDy=0;
+             entryX=0;entryY=0.3;entryDx=0;entryDy=0;
+             strokeColor=#f57f17;strokeWidth=3;fontColor=#bf360c;
+             fontSize=11;fontStyle=1;endArrow=block;endFill=1;html=1;"
+      edge="1" source="express-bg" target="data-bg" parent="1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+
+    <!-- JSON response: Express â†’ Vite (dashed return) -->
+    <mxCell id="arrow-api-resp"
+      value="JSON response"
+      style="edgeStyle=orthogonalEdgeStyle;rounded=1;
+             exitX=0;exitY=0.6;exitDx=0;exitDy=0;
+             entryX=1;entryY=0.65;entryDx=0;entryDy=0;
+             strokeColor=#c62828;strokeWidth=2;fontColor=#7b0000;
+             fontSize=11;dashed=1;endArrow=open;endFill=0;html=1;"
+      edge="1" source="express-bg" target="vite-bg" parent="1">
+      <mxGeometry relative="1" as="geometry">
+        <Array as="points">
+          <mxPoint x="910" y="660" />
+          <mxPoint x="878" y="660" />
+        </Array>
+      </mxGeometry>
+    </mxCell>
+
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <!-- LEGEND                                                      -->
+    <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+    <mxCell id="legend-bg"
+      value=""
+      style="rounded=1;fillColor=#f5f5f5;strokeColor=#9e9e9e;strokeWidth=1.5;"
+      vertex="1" parent="1">
+      <mxGeometry x="40" y="1020" width="1740" height="74" as="geometry" />
+    </mxCell>
+
+    <mxCell id="legend-title"
+      value="Legend / Tech Stack"
+      style="text;html=1;strokeColor=none;fillColor=none;align=left;
+             fontSize=13;fontStyle=1;fontColor=#333333;"
+      vertex="1" parent="1">
+      <mxGeometry x="52" y="1024" width="190" height="24" as="geometry" />
+    </mxCell>
+
+    <mxCell id="leg-client"
+      value="Client Layer (React SPA)"
+      style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1.5;
+             fontSize=12;fontStyle=1;align=center;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="52" y="1052" width="200" height="32" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-vite"
+      value="Vite Dev Server"
+      style="rounded=1;fillColor=#e8f5e9;strokeColor=#388e3c;strokeWidth=1.5;
+             fontSize=12;fontStyle=1;align=center;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="264" y="1052" width="180" height="32" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-api"
+      value="Express REST API"
+      style="rounded=1;fillColor=#fce4ec;strokeColor=#c62828;strokeWidth=1.5;
+             fontSize=12;fontStyle=1;align=center;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="456" y="1052" width="190" height="32" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-data"
+      value="Data Layer (In-Memory)"
+      style="rounded=1;fillColor=#fff8e1;strokeColor=#f57f17;strokeWidth=1.5;
+             fontSize=12;fontStyle=1;align=center;whiteSpace=wrap;"
+      vertex="1" parent="1">
+      <mxGeometry x="658" y="1052" width="200" height="32" as="geometry" />
+    </mxCell>
+    <mxCell id="leg-state"
+      value="React Context / State"
+      style="rounded=1;fillColor=#d6eaf8;strokeColor=#2980b9;strokeWidth=1.5;
+             fontSize=12;fontStyle=1;align=center;whiteSpace=wrap;dashed=1;"
+      vertex="1" parent="1">
+      <mxGeometry x="870" y="1052" width="200" height="32" as="geometry" />
+    </mxCell>
+
+    <mxCell id="tech-stack-note"
+      value="Node.js 18+  &#183;  React 18  &#183;  Vite 7  &#183;  Express 4  &#183;  Tailwind CSS 3  &#183;  React Router v6  &#183;  axios 1.x  &#183;  nodemon (dev)  &#183;  concurrently (root scripts)"
+      style="text;html=1;strokeColor=none;fillColor=none;align=right;
+             fontSize=12;fontStyle=2;fontColor=#555555;"
+      vertex="1" parent="1">
+      <mxGeometry x="1082" y="1058" width="698" height="24" as="geometry" />
+    </mxCell>
+
+  </root>
+</mxGraphModel>
